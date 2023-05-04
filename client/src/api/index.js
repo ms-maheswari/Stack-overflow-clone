@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API = axios.create({ baseURL: 'https://my-stack-overflow-akot.onrender.com'})
+const API = axios.create({ baseURL: 'https://stack-overflow-clone-mu.vercel.app'})
 API.interceptors.request.use((req) => {
     if(localStorage.getItem('Profile')){
         req.headers.authorization = `Bearer ${JSON.parse(localStorage.getItem('Profile')).token}`
